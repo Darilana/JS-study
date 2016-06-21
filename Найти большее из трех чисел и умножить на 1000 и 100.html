@@ -12,35 +12,26 @@ var secondNumber = 10;
 var thirdNumber = 15;
 
 if (firstNumber > secondNumber && firstNumber > thirdNumber) {
-	firstNumber = (firstNumber * 1000);
+    alert = (firstNumber * 1000);
+} else if (firstNumber > secondNumber || firstNumber > thirdNumber) {
+    alert = (firstNumber * 100);
+} else {
+    alert = (firstNumber);
 }
-else if (firstNumber > secondNumber || firstNumber > thirdNumber) {
-	firstNumber = (firstNumber * 100);
-}
-
-	alert(firstNumber)
-
 if (secondNumber > firstNumber && secondNumber > thirdNumber) {
-	secondNumber = (secondNumber * 1000);
+    alert = (secondNumber * 1000);
+} else if (secondNumber > firstNumber || secondNumber > thirdNumber) {
+    alert = (secondNumber * 100);
+} else {
+    alert(secondNumber);
 }
-else if (secondNumber > firstNumber || secondNumber > thirdNumber) {
-	secondNumber = (secondNumber * 100);
-}
-
-	alert(secondNumber)
-
-
 if (thirdNumber > firstNumber && thirdNumber > secondNumber) {
-	thirdNumber = (thirdNumber * 1000);
+    alert = (thirdNumber * 1000);
+} else if (thirdNumber > firstNumber || thirdNumber > secondNumber) {
+    alert = (thirdNumber * 100);
+} else {
+    alert(thirdNumber);
 }
-else if (thirdNumber > firstNumber || thirdNumber > secondNumber) {
-	thirdNumber = (thirdNumber * 100);
-}
-
-	alert(thirdNumber)
-
-
-
 	</script>
 
 </body>
