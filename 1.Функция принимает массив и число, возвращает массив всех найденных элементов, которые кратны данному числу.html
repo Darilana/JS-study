@@ -6,18 +6,20 @@
 </head>
 <body>
 
-function findAliquot(arr) {
-
+function findAliquot(arr, num) {
+   var result = [];
+   
 	for (var i = 0; i < arr.length; i++) {
-		if (arr[i] % 5 === 0) {
-		console.log(arr[i]);
+		if (arr[i] % num === 0) {
+		result.push(arr[i]);
 		}
 	}
+  return result;
 }
 
 var anyArr = [5, 7, 10, 45, 32];
 
-findAliquot(anyArr);
+findAliquot(anyArr, 5);
 
 </body>
 </html>
