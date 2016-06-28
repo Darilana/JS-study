@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<script>
+	function randomInteger(min, max) {
+  return Math.floor( min + Math.random() * (max + 1 - min) );
+}
+
+function createTwoDimentionalArray(size) {
+  var result = [];
+
+  for (var i = 0; i < size; i++) {
+    var innerArr = [];
+    for (var j = 0; j < size; j++) {
+      innerArr.push( randomInteger(1, 100) );
+    }
+    result.push(innerArr);
+  }
+
+  return result;
+}
+var arr = createTwoDimentionalArray(5);
+console.table(arr);
+
+function perimeter(arr) {
+  var result = [];
+
+  var top = arr[0].slice().reverse();
+  var bottom = arr[arr.length - 1].slice();
+  var right = [];
+  var left = [];
+  
+  for (var i = 1; i < arr.length - 1; i++) {
+    right.push( arr[i][arr[i].length - 1] );
+    left.push( arr[i][0] );
+  }
+  right.reverse();
+
+  result = top.concat(left, bottom, right);
+
+  return result;
+}
+var r = perimeter(arr);
+console.log('perimeter', r);
+
+</script>
+</body>
+</html>
