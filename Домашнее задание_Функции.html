@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<script>
+
+//Функция принимает массив и число, возвращает массив всех найденных элементов, которые кратны данному числу
+
+function findAliquot(arr, num) {
+	var result = [];
+	
+	for (var i = 0; i < arr.length; i++) {
+		if (arr[i] % num === 0) {
+			result.push(arr[i]);
+		}
+	}
+	return result;
+}
+
+var anyArr = [5, 7, 10, 45, 32];
+
+findAliquot(anyArr, 5);
+
+//Функция, эмулирующая поведение reverse
+
+var fruitsArr = ['яблоко', 'слива', 'вишня'];
+
+function revertArray(arr, index) {
+	for (var i = 0; i <= arr.length; i++) {
+		index = arr.length - i;
+		console.log( arr[index] )
+	}
+}
+
+revertArray(fruitsArr);
+
+//Функция, эмулирующую поведение lastIndexOf
+
+function findInArr(arr, el) {
+	var found = -1;
+	for (var i = arr.length - 1; i <= arr.length; i--) {
+		if (arr[i] === el) {
+			found = i;
+			break;
+		}
+	}
+	return found;
+}
+var array = [10,20,45,7,12];
+findInArr(array, 45);
+
+</script>
+</body>
+</html>
