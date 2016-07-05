@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<script>
+
+// Cделать часики (получать текущее время и выводить через console.log). Следующую итерацию начать с того что почистить консоль, получить дату, вывести.
+
+	var timerId = setInterval(function() {
+		var now = new Date();
+  		console.log( now );
+	}, 1000);
+
+	setTimeout(function() {
+		clearInterval(timerId);
+		console.log( 'One minute passed!');
+	}, 60000);
+
+</script>
+</body>
+</html>
